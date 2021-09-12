@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "5b2dc0ec-5989-4f95-a70d-d631ab95bd71",
+		"name": "K8S",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Platform Services",
+			"item": [
+				{
+					"name": "Get All Platforms",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/platform/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"platform",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Platform",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/platform/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"platform",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Platform",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Docker\",\n    \"publisher\": \"Docker\",\n    \"cost\": \"Free\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/api/platform",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"platform"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Command Services",
+			"item": [
+				{
+					"name": "Post Inbound Test",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/command/platform",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"command",
+								"platform"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

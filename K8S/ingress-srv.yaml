@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-srv
+spec:
+  rules:
+      - http:
+          paths:
+            - path: /api/platform
+              pathType: Prefix
+              backend:
+                service:
+                  name: platform-clusterip-srv
+                  port:
+                    number: 80
+            - path: /api/command/platform
+              pathType: Prefix
+              backend:
+                service:
+                  name: command-clusterip-srv
+                  port:
+                    number: 80
