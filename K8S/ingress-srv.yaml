@@ -1,10 +1,13 @@
+# Firstly, microk8s enable ingress
+
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: ingress-srv
 spec:
   rules:
-      - http:
+      - host: localservice.com
+        http:
           paths:
             - path: /api/platform
               pathType: Prefix

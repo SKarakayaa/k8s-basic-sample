@@ -22,6 +22,7 @@ namespace PlatformService.SyncDataServices.Http
         {
             var httpContent = new StringContent(JsonSerializer.Serialize(platform), Encoding.UTF8, "application/json");
 
+            //TODO : CommandService Should be endpoints' name, not IP Address
             var response = await _httpClient.PostAsync($"{_configuration["CommandService"]}", httpContent);
 
             if (response.IsSuccessStatusCode)
