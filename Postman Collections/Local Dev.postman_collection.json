@@ -103,6 +103,107 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Get All Platforms",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/api/command/platform",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"command",
+								"platform"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Commands For Platform",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/api/command/platform/1/commands",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"command",
+								"platform",
+								"1",
+								"commands"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Command For Platform",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/api/command/platform/1/commands/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"command",
+								"platform",
+								"1",
+								"commands",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Command For Platform",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"HowTo\":\"Build a .net project\",\n    \"CommandLine\":\"dotnet build\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/api/command/platform/1/commands/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"command",
+								"platform",
+								"1",
+								"commands",
+								"2"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}
