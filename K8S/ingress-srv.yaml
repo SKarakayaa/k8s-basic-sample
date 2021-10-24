@@ -1,9 +1,13 @@
 # Firstly, microk8s enable ingress
+# And, annotations is just for Windows
 
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: ingress-srv
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.kubernetes.io/use-regex: 'true'
 spec:
   rules:
       - host: localservice.com
